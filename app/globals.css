@@ -1,30 +1,32 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────
-   Design tokens — Madeleine & Léon (v2)
-   Chocolat · Crème · Beurre · Vichy
+   Design tokens — Madeleine & Léon (v3)
+   Noir · Beige
+   Les noms historiques (choco, creme, beurre, vichy) sont conservés
+   pour ne pas toucher aux composants ; seules les valeurs changent.
 ───────────────────────────────────────────── */
 @theme {
-  /* Chocolat */
-  --color-choco:      #1C0A03;
-  --color-choco-med:  #3D1F0F;
-  --color-choco-cl:   #6B3820;
+  /* Noirs (ex-chocolat) */
+  --color-choco:      #121110;  /* noir chaud — fonds sombres, titres */
+  --color-choco-med:  #2A2723;  /* anthracite — texte courant */
+  --color-choco-cl:   #6E665C;  /* taupe — légendes, labels */
 
-  /* Crème */
-  --color-creme:      #F5EDD8;
-  --color-creme-alt:  #EFE4C4;
+  /* Beiges clairs (ex-crème) */
+  --color-creme:      #EFE8DC;  /* fond principal */
+  --color-creme-alt:  #E4DACA;  /* sections alternées */
 
-  /* Beurre doré */
-  --color-beurre:     #E8A020;
-  --color-beurre-cl:  #F2C45A;
+  /* Beige sable (ex-beurre) — accent */
+  --color-beurre:     #B89B6E;
+  --color-beurre-cl:  #D6C3A0;
 
-  /* Vichy blue — section marchés */
-  --color-vichy:      #2B4BAD;
-  --color-vichy-cl:   #5576D1;
-  --color-vichy-pale: #D0D9F5;
+  /* Anthracite (ex-vichy bleu) — section marchés */
+  --color-vichy:      #2A2723;
+  --color-vichy-cl:   #4A453E;
+  --color-vichy-pale: #E4DACA;
 
-  /* Noir */
-  --color-noir:       #0D0605;
+  /* Noir profond — footer */
+  --color-noir:       #0A0909;
 }
 
 /* Typographies — via next/font CSS variables */
@@ -111,15 +113,15 @@ html {
 }
 
 body {
-  background-color: #F5EDD8;
-  color: #1C0A03;
+  background-color: #EFE8DC;
+  color: #121110;
   /* Default to display font for headings / body text */
   font-family: var(--font-fraunces), Georgia, serif;
 }
 
 /* Focus ring — beurre doré */
 *:focus-visible {
-  outline: 2px solid #E8A020;
+  outline: 2px solid #B89B6E;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -127,8 +129,8 @@ body {
 /* Lock palette — no dark-mode inversion */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #F5EDD8;
-    color: #1C0A03;
+    background-color: #EFE8DC;
+    color: #121110;
   }
 }
 

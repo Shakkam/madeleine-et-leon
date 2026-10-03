@@ -25,14 +25,14 @@ function Sticker() {
           />
         </defs>
         {/* Fond */}
-        <circle cx="60" cy="60" r="58" fill="#1C0A03" />
+        <circle cx="60" cy="60" r="58" fill="#121110" />
         {/* Liseré pointillé doré */}
         <circle
           cx="60"
           cy="60"
           r="50"
           fill="none"
-          stroke="#E8A020"
+          stroke="#B89B6E"
           strokeWidth="1"
           strokeDasharray="3 3.5"
         />
@@ -40,7 +40,7 @@ function Sticker() {
         <text
           fontSize="6.5"
           fontFamily="var(--font-space-mono), monospace"
-          fill="#F5EDD8"
+          fill="#EFE8DC"
         >
           {/* textLength = périmètre (2π × 42 ≈ 263.9) : le texte fait pile un tour */}
           <textPath
@@ -61,7 +61,7 @@ function Sticker() {
           fontFamily="var(--font-fraunces), Georgia, serif"
           fontStyle="italic"
           fontWeight="800"
-          fill="#E8A020"
+          fill="#B89B6E"
           style={{ fontVariationSettings: '"SOFT" 90, "WONK" 1' }}
         >
           M&amp;L
@@ -73,7 +73,7 @@ function Sticker() {
           textAnchor="middle"
           fontSize="5.5"
           fontFamily="var(--font-space-mono), monospace"
-          fill="#F5EDD8"
+          fill="#EFE8DC"
           letterSpacing="1.5"
           opacity="0.7"
         >
@@ -115,7 +115,7 @@ export default function HeroSection() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(100deg, rgba(28,10,3,0.92) 0%, rgba(28,10,3,0.78) 45%, rgba(28,10,3,0.35) 100%)",
+            "linear-gradient(100deg, rgba(18,17,16,0.92) 0%, rgba(18,17,16,0.78) 45%, rgba(18,17,16,0.35) 100%)",
         }}
       />
 

@@ -20,7 +20,7 @@ function ParfumCard({ parfum, index, total, isSalee, shouldReduce }) {
       className={`${isWide ? "col-span-2" : "col-span-1"} rounded-2xl px-5 py-4 cursor-default select-none
         ${isSalee ? "bg-creme/10 border border-creme/15" : "bg-choco/8 border border-choco/12"}`}
       style={{
-        background: isSalee ? "rgba(245,237,216,0.10)" : "rgba(28,10,3,0.07)",
+        background: isSalee ? "rgba(239,232,220,0.10)" : "rgba(18,17,16,0.07)",
       }}
       whileHover={
         shouldReduce

@@ -94,7 +94,7 @@ export default function SiteHeader() {
                 onClick={() => setOpen(false)}
                 aria-current={isActive(href) ? "page" : undefined}
                 className={`block font-display fraunces-soft italic font-bold text-2xl py-2 ${
-                  isActive(href) ? "text-beurre" : "text-choco"
+                  isActive(href) ? "text-choco underline decoration-beurre decoration-4 underline-offset-8" : "text-choco-med"
                 }`}
               >
                 {label}

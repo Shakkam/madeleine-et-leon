@@ -43,7 +43,7 @@ export default function CommanderSection() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none opacity-[0.06]"
         style={{
-          backgroundImage: "radial-gradient(circle, #F5EDD8 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #EFE8DC 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />

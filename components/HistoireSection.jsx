@@ -65,10 +65,10 @@ export default function HistoireSection() {
               className="h-5 w-full"
               style={{
                 backgroundImage: [
-                  "repeating-linear-gradient(0deg, rgba(43,75,173,0.50) 0px, rgba(43,75,173,0.50) 4px, transparent 4px, transparent 8px)",
-                  "repeating-linear-gradient(90deg, rgba(43,75,173,0.50) 0px, rgba(43,75,173,0.50) 4px, transparent 4px, transparent 8px)",
+                  "repeating-linear-gradient(0deg, rgba(18,17,16,0.50) 0px, rgba(18,17,16,0.50) 4px, transparent 4px, transparent 8px)",
+                  "repeating-linear-gradient(90deg, rgba(18,17,16,0.50) 0px, rgba(18,17,16,0.50) 4px, transparent 4px, transparent 8px)",
                 ].join(", "),
-                backgroundColor: "rgba(43,75,173,0.10)",
+                backgroundColor: "rgba(18,17,16,0.10)",
               }}
             />
             <div className="relative aspect-[4/3] overflow-hidden">

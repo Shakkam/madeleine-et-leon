@@ -40,7 +40,7 @@ export default function QuiSommesNousSection() {
                   />
                 </div>
                 <div>
-                  <p className="font-label text-xs tracking-[0.25em] uppercase text-beurre mb-3">
+                  <p className="font-label text-xs tracking-[0.25em] uppercase text-choco-cl mb-3">
                     {m.role}
                   </p>
                   <h2

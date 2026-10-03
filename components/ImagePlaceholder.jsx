@@ -6,7 +6,7 @@
  */
 
 /** Madeleine vue de dessus — SVG illustratif */
-export function MadeleineSvg({ fill = "#E8A020", stroke = "#C8760F" }) {
+export function MadeleineSvg({ fill = "#B89B6E", stroke = "#8C7552" }) {
   return (
     <svg
       viewBox="0 0 200 140"
@@ -57,8 +57,8 @@ export default function ImagePlaceholder({
   className = "",
 }) {
   const isSalee = variant === "salee";
-  const fill = isSalee ? "#3D1F0F" : "#E8A020";
-  const stroke = isSalee ? "#6B3820" : "#C8760F";
+  const fill = isSalee ? "#2A2723" : "#B89B6E";
+  const stroke = isSalee ? "#6E665C" : "#8C7552";
   const bg = isSalee ? "bg-choco-med" : "bg-creme-alt";
   const label = isSalee ? "text-creme" : "text-choco";
 
