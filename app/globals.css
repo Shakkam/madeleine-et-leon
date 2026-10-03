@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Design tokens — Madeleine & Léon (v2)
+   Chocolat · Crème · Beurre · Vichy
+───────────────────────────────────────────── */
+@theme {
+  /* Chocolat */
+  --color-choco:      #1C0A03;
+  --color-choco-med:  #3D1F0F;
+  --color-choco-cl:   #6B3820;
+
+  /* Crème */
+  --color-creme:      #F5EDD8;
+  --color-creme-alt:  #EFE4C4;
+
+  /* Beurre doré */
+  --color-beurre:     #E8A020;
+  --color-beurre-cl:  #F2C45A;
+
+  /* Vichy blue — section marchés */
+  --color-vichy:      #2B4BAD;
+  --color-vichy-cl:   #5576D1;
+  --color-vichy-pale: #D0D9F5;
+
+  /* Noir */
+  --color-noir:       #0D0605;
+}
+
+/* Typographies — via next/font CSS variables */
+@theme inline {
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-label:   var(--font-space-mono), "Courier New", monospace;
+}
+
+/* ─────────────────────────────────────────────
+   Keyframes
+───────────────────────────────────────────── */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─────────────────────────────────────────────
+   Custom utilities
+───────────────────────────────────────────── */
+@layer utilities {
+  /* Grain film — applied via body::after */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.038;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+  }
+
+  /* Marquee */
+  .animate-marquee {
+    animation: marquee-left 45s linear infinite;
+  }
+
+  /* Sticker */
+  .animate-spin-slow {
+    animation: spin-slow 40s linear infinite;
+  }
+
+  /* Fraunces axis presets */
+  .fraunces-soft {
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+  }
+  .fraunces-mid {
+    font-variation-settings: "SOFT" 40, "WONK" 0;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Base
+───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  /* Barre d'annonce fixe (h-9) : les ancres ne passent pas dessous */
+  scroll-padding-top: 2.25rem;
+}
+
+/* Barre d'annonce : pause au survol */
+.marquee-bar:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+body {
+  background-color: #F5EDD8;
+  color: #1C0A03;
+  /* Default to display font for headings / body text */
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+/* Focus ring — beurre doré */
+*:focus-visible {
+  outline: 2px solid #E8A020;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Lock palette — no dark-mode inversion */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #F5EDD8;
+    color: #1C0A03;
+  }
+}
+
+/* Disable motion on system preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-spin-slow {
+    animation: none;
+  }
+}
