@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { gammes } from "@/data/content";
 import Image from "next/image";
+import Link from "next/link";
 import ImagePlaceholder from "./ImagePlaceholder";
 
 /**
@@ -129,6 +130,17 @@ function GammeBloc({ gamme, index }) {
             />
           ))}
         </div>
+
+        <Link
+          href={`/${gamme.id}`}
+          className={`mt-8 inline-flex items-center gap-2 self-start px-6 py-3 rounded-full font-label text-xs tracking-[0.22em] uppercase transition-colors duration-200 ${
+            isSalee
+              ? "bg-beurre text-choco hover:bg-creme"
+              : "bg-choco text-creme hover:bg-creme hover:text-choco"
+          }`}
+        >
+          Découvrir {gamme.nom} <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </motion.article>
   );

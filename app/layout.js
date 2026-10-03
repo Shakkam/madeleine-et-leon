@@ -1,5 +1,8 @@
 import { Fraunces, Space_Mono } from "next/font/google";
 import "./globals.css";
+import SiteHeader from "@/components/SiteHeader";
+import Footer from "@/components/Footer";
+import IntroLoader from "@/components/IntroLoader";
 
 /**
  * Fraunces — variable font with SOFT and WONK axes.
@@ -22,7 +25,10 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata = {
-  title: "Madeleine & Léon — Madeleines artisanales à Bordeaux",
+  title: {
+    default: "Madeleine & Léon — Madeleines artisanales à Bordeaux",
+    template: "%s — Madeleine & Léon",
+  },
   description:
     "Madeleines artisanales & ultra moelleuses. Gamme sucrée Madeleine et gamme salée Léon. Retrouvez-nous sur les marchés bordelais.",
   openGraph: {
@@ -42,8 +48,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${spaceMono.variable}`}>
-      <body className="antialiased">{children}</body>
+    <html lang="fr" className={`${fraunces.variable} ${spaceMono.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Intro déjà vue dans cette session : on la masque avant le premier rendu */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('ml-intro'))document.documentElement.classList.add('intro-vue')}catch(e){}",
+          }}
+        />
+        <noscript>
+          <style>{".intro-loader{display:none}"}</style>
+        </noscript>
+      </head>
+      <body className="antialiased">
+        <IntroLoader />
+        <SiteHeader />
+        {/* Décalage = hauteur du header fixe (bandeau + onglets) */}
+        <main className="pt-[5.75rem]">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

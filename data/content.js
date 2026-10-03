@@ -92,6 +92,40 @@ export const marches = [
   // },
 ];
 
+/**
+ * Onglets du menu (ordre d'affichage)
+ */
+export const navigation = [
+  { href: "/histoire", label: "Histoire" },
+  { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
+  { href: "/commandes-et-marches", label: "Commandes & marchés" },
+  { href: "/madeleine", label: "Madeleine" },
+  { href: "/leon", label: "Léon" },
+];
+
+/**
+ * Qui sommes-nous — À COMPLÉTER avec les vrais prénoms et textes.
+ */
+export const equipe = {
+  intro:
+    "Derrière Madeleine & Léon, il y a une passion simple : faire des madeleines comme on les aime, moelleuses et généreuses, et les partager de vive voix sur les marchés bordelais.",
+  membres: [
+    {
+      prenom: "[Prénom à compléter]",
+      role: "Fondation · Pâtisserie · Stand",
+      bio: "[Quelques lignes à compléter : parcours, pourquoi les madeleines, la recette de famille, l'envie de lancer la marque en 2026…]",
+      photo: "/images/stand-marche.jpg",
+      photoPosition: "38% 30%",
+      photoAlt: "Au stand Madeleine & Léon, une boîte kraft tendue à un client",
+    },
+  ],
+  valeurs: [
+    { titre: "Fait main", texte: "Chaque fournée est préparée à la main, en petites quantités." },
+    { titre: "Ingrédients simples", texte: "Beurre, œufs, farine : pas de colorants ni de conservateurs." },
+    { titre: "Le partage", texte: "Des madeleines pensées pour être offertes et partagées." },
+  ],
+};
+
 export const liens = {
   instagram: "https://www.instagram.com/madeleine.leon.france",
   instagramDM: "https://ig.me/m/madeleine.leon.france",

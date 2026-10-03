@@ -41,6 +41,12 @@
   to   { transform: translateX(-50%); }
 }
 
+@keyframes madeleine-turn {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
@@ -67,6 +73,11 @@
     animation: marquee-left 45s linear infinite;
   }
 
+  /* Écran de chargement */
+  .animate-madeleine {
+    animation: madeleine-turn 1.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
   /* Sticker */
   .animate-spin-slow {
     animation: spin-slow 40s linear infinite;
@@ -86,11 +97,15 @@
 ───────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  /* Barre d'annonce fixe (h-9) : les ancres ne passent pas dessous */
-  scroll-padding-top: 2.25rem;
+  /* Header fixe (bandeau h-9 + onglets h-14) : les ancres ne passent pas dessous */
+  scroll-padding-top: 5.75rem;
 }
 
 /* Barre d'annonce : pause au survol */
+.intro-vue .intro-loader {
+  display: none;
+}
+
 .marquee-bar:hover .animate-marquee {
   animation-play-state: paused;
 }
@@ -120,6 +135,7 @@ body {
 /* Disable motion on system preference */
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
+  .animate-madeleine,
   .animate-spin-slow {
     animation: none;
   }

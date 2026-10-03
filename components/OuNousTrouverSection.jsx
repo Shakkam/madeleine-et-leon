@@ -102,12 +102,12 @@ export default function OuNousTrouverSection() {
           <p className="font-label text-xs tracking-[0.3em] uppercase text-vichy-pale/70 mb-3">
             Marchés bordelais
           </p>
-          <h2
+          <h1
             className="font-display fraunces-soft italic font-black text-creme leading-none"
             style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}
           >
             Où nous trouver
-          </h2>
+          </h1>
           <p className="font-display fraunces-mid text-base sm:text-lg text-creme/70 mt-5 max-w-md leading-relaxed">
             Retrouvez-nous chaque semaine sur les marchés. La liste s&apos;agrandit —
             suivez{" "}

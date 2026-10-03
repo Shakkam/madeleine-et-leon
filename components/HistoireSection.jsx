@@ -23,12 +23,12 @@ export default function HistoireSection() {
           <p className="font-label text-xs tracking-[0.3em] uppercase text-choco-cl mb-4">
             Fait main · Avec amour
           </p>
-          <h2
+          <h1
             className="font-display fraunces-soft italic font-black text-choco leading-none"
             style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}
           >
             {histoire.titre}
-          </h2>
+          </h1>
         </motion.div>
 
         {/* Corps — deux colonnes sur desktop */}

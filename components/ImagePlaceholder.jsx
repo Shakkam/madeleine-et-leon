@@ -6,7 +6,7 @@
  */
 
 /** Madeleine vue de dessus — SVG illustratif */
-function MadeleineSvg({ fill = "#E8A020", stroke = "#C8760F" }) {
+export function MadeleineSvg({ fill = "#E8A020", stroke = "#C8760F" }) {
   return (
     <svg
       viewBox="0 0 200 140"

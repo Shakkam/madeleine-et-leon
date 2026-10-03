@@ -27,7 +27,7 @@ const toneClass = {
 export default function MarqueeBanner() {
   return (
     <div
-      className="marquee-bar fixed top-0 inset-x-0 z-50 h-9 bg-choco overflow-hidden flex items-center border-b border-beurre/20"
+      className="marquee-bar h-9 bg-choco overflow-hidden flex items-center border-b border-beurre/20"
       role="region"
       aria-label={`Nos parfums et marchés : ${items.map((i) => i.label).join(", ")}`}
     >

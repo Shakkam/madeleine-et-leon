@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { liens, infos } from "@/data/content";
 
@@ -98,7 +99,7 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative isolate min-h-screen bg-choco flex flex-col justify-center overflow-hidden px-6 sm:px-10 lg:px-16 pt-20 pb-24"
+      className="relative isolate min-h-[calc(100svh-5.75rem)] bg-choco flex flex-col justify-center overflow-hidden px-6 sm:px-10 lg:px-16 pt-20 pb-24"
     >
       {/* Photo de fond + voile chocolat pour la lisibilité */}
       <Image
@@ -119,7 +120,7 @@ export default function HeroSection() {
       />
 
       {/* Sticker rotatif — coin supérieur droit */}
-      <div className="absolute top-14 right-6 sm:top-16 sm:right-10 lg:right-16 z-10">
+      <div className="absolute top-6 right-6 sm:top-8 sm:right-10 lg:right-16 z-10">
         <Sticker />
       </div>
 
@@ -202,12 +203,12 @@ export default function HeroSection() {
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
-        <a
-          href="#nos-marches"
+        <Link
+          href="/commandes-et-marches"
           className="inline-flex items-center justify-center px-8 py-3.5 bg-transparent text-creme font-label text-xs tracking-[0.22em] uppercase rounded-full border-2 border-creme/40 hover:border-creme hover:bg-creme/10 transition-all duration-200 w-fit"
         >
           Nos marchés
-        </a>
+        </Link>
       </motion.div>
 
       {/* France 2026 */}
