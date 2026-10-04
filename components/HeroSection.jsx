@@ -109,7 +109,7 @@ export default function HeroSection() {
         className="font-label text-xs tracking-wider text-creme/75 mt-2.5 max-w-xs"
         {...fadeUp(0.5)}
       >
-        Ingrédients simples &nbsp;·&nbsp; Goût authentique &nbsp;·&nbsp; Marchés bordelais
+        Ingrédients choisis &nbsp;·&nbsp; Du sucré au salé &nbsp;·&nbsp; Marchés bordelais
       </motion.p>
 
       {/* ─── CTAs — boutons pilule ─── */}

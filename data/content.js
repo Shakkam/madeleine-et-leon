@@ -6,7 +6,7 @@
 export const infos = {
   nom: "Madeleine & Léon",
   slogan: "Artisanales & ultra moelleuses",
-  tagline: "Ingrédients simples, goût authentique",
+  tagline: "Ingrédients choisis, du sucré au salé",
   description:
     "Madeleines artisanales faites avec amour à Bordeaux. Gamme sucrée Madeleine et gamme salée Léon, à retrouver sur les marchés bordelais.",
   fondation: "2026",
@@ -51,7 +51,7 @@ export const gammes = [
 export const histoire = {
   titre: "Notre savoir-faire",
   paragraphes: [
-    "Madeleine & Léon, c'est une histoire de goût, de générosité et de beaucoup d'amour. Derrière chaque madeleine, il y a des ingrédients simples, choisis avec soin, et une pâte travaillée à la main.",
+    "Madeleine & Léon, c'est une histoire de goût, de générosité et de beaucoup d'amour. Derrière chaque madeleine, il y a des ingrédients de qualité, choisis avec soin, et une pâte travaillée à la main.",
     "La bosse, ce petit dôme doré qui gonfle à la cuisson, c'est le signe que tout a été fait comme il faut. Ni colorants, ni conservateurs — juste du beurre, des œufs, de la farine et la recette qu'on chérit.",
     "Sucrées ou salées, nos madeleines sont faites pour être partagées : sur un marché, entre amis, en famille, ou glissées dans une jolie boîte kraft comme un cadeau qui vient du cœur.",
   ],
@@ -121,7 +121,7 @@ export const equipe = {
   ],
   valeurs: [
     { titre: "Fait main", texte: "Chaque fournée est préparée à la main, en petites quantités." },
-    { titre: "Ingrédients simples", texte: "Beurre, œufs, farine : pas de colorants ni de conservateurs." },
+    { titre: "Ingrédients soignés", texte: "Beurre, œufs, farine : pas de colorants ni de conservateurs." },
     { titre: "Le partage", texte: "Des madeleines pensées pour être offertes et partagées." },
   ],
 };
