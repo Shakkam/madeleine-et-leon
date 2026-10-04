@@ -5,82 +5,17 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { liens, infos } from "@/data/content";
 
-/**
- * Sticker SVG rotatif — reproduction du sticker rond sur les boîtes kraft.
- * Texte circulaire "MADELEINE & LÉON · FRANCE · PÂTISSERIE ·"
- * + sigle central M&L.
- */
+/** Logo rond officiel Madeleine & Léon. */
 function Sticker() {
   return (
-    <div
-      className="animate-spin-slow w-28 h-28 sm:w-36 sm:h-36"
-      aria-hidden="true"
-    >
-      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          {/* Chemin circulaire pour textPath */}
-          <path
-            id="sp"
-            d="M 60,60 m -42,0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0"
-          />
-        </defs>
-        {/* Fond */}
-        <circle cx="60" cy="60" r="58" fill="#121110" />
-        {/* Liseré pointillé doré */}
-        <circle
-          cx="60"
-          cy="60"
-          r="50"
-          fill="none"
-          stroke="#B89B6E"
-          strokeWidth="1"
-          strokeDasharray="3 3.5"
-        />
-        {/* Texte circulaire */}
-        <text
-          fontSize="6.5"
-          fontFamily="var(--font-space-mono), monospace"
-          fill="#EFE8DC"
-        >
-          {/* textLength = périmètre (2π × 42 ≈ 263.9) : le texte fait pile un tour */}
-          <textPath
-            href="#sp"
-            startOffset="0"
-            textLength="262"
-            lengthAdjust="spacing"
-          >
-            MADELEINE &amp; LÉON · FRANCE · PÂTISSERIE ·
-          </textPath>
-        </text>
-        {/* Sigle M&L — Fraunces italic */}
-        <text
-          x="60"
-          y="56"
-          textAnchor="middle"
-          fontSize="16"
-          fontFamily="var(--font-fraunces), Georgia, serif"
-          fontStyle="italic"
-          fontWeight="800"
-          fill="#B89B6E"
-          style={{ fontVariationSettings: '"SOFT" 90, "WONK" 1' }}
-        >
-          M&amp;L
-        </text>
-        {/* Sous-texte */}
-        <text
-          x="60"
-          y="70"
-          textAnchor="middle"
-          fontSize="5.5"
-          fontFamily="var(--font-space-mono), monospace"
-          fill="#EFE8DC"
-          letterSpacing="1.5"
-          opacity="0.7"
-        >
-          ARTISANALES
-        </text>
-      </svg>
-    </div>
+    <Image
+      src="/images/logo.png"
+      alt="Madeleine & Léon — Pâtisserie artisanale, France 2023"
+      width={1024}
+      height={1024}
+      priority
+      className="animate-spin-slow w-28 h-28 sm:w-40 sm:h-40 drop-shadow-xl"
+    />
   );
 }
 
@@ -119,7 +54,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Sticker rotatif — coin supérieur droit */}
+      {/* Logo rond rotatif — coin supérieur droit */}
       <div className="absolute top-6 right-6 sm:top-8 sm:right-10 lg:right-16 z-10">
         <Sticker />
       </div>
