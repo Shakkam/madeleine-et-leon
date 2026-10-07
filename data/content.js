@@ -10,6 +10,9 @@ export const infos = {
   description:
     "Madeleines artisanales faites avec amour à Bordeaux. Gamme sucrée Madeleine et gamme salée Léon, à retrouver sur les marchés bordelais.",
   fondation: "2026",
+  siret: "828 363 796 00024",
+  activite:
+    "Fabrication artisanale et vente ambulante de madeleines et autres produits de pâtisserie sur marchés et foires",
   region: "Bordeaux, France",
 };
 
@@ -27,6 +30,11 @@ export const gammes = [
       "Marbrée",
       "Pistache",
       "Enrobage blanc",
+      "Coque chocolat blanc",
+      "Coque chocolat noir",
+      "Coque chocolat au lait",
+      "Cœur framboise",
+      "Cœur chocolat",
     ],
     image: "/images/gamme-madeleine.jpg",
     // Passer à true quand la photo est déposée dans public/images/
@@ -40,7 +48,14 @@ export const gammes = [
     tagline: "La gamme salée",
     description:
       "Le caractère en version salée : des madeleines qui réinventent l'apéro. Garnies avec générosité, à partager sans modération.",
-    parfums: ["Chorizo-féta", "Tomate séchée-gruyère"],
+    parfums: [
+      "Olive lardon",
+      "Olive feta",
+      "Lardon raclette",
+      "Chorizo brebis",
+      "Chorizo piment doux",
+      "Lardon emmental",
+    ],
     image: "/images/gamme-leon.jpg",
     imageDispo: true,
     imageAlt:
@@ -96,7 +111,27 @@ export const marches = [
     codePostal: "33400",
     adresse: "Place du Forum, 33400 Talence",
     jours: ["Mercredi"],
-    horaires: "Horaires à confirmer",
+    horaires: "7 h 30 – 13 h",
+    notes: "",
+  },
+  {
+    id: "saint-genes-bordeaux",
+    lieu: "Marché de Saint-Genès",
+    ville: "Bordeaux",
+    codePostal: "33000",
+    adresse: "Marché de Saint-Genès, 33000 Bordeaux",
+    jours: ["Samedi"],
+    horaires: "8 h – 13 h",
+    notes: "",
+  },
+  {
+    id: "thouars-talence",
+    lieu: "Marché de Thouars",
+    ville: "Talence",
+    codePostal: "33400",
+    adresse: "Marché de Thouars, 33400 Talence",
+    jours: ["Dimanche"],
+    horaires: "8 h – 13 h",
     notes: "",
   },
   // Exemple pour ajouter un marché :

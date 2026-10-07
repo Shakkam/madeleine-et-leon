@@ -57,9 +57,16 @@ export default function Footer() {
       </div>
 
       <div
+        id="mentions-legales"
         className="max-w-5xl mx-auto mt-10 pt-8 border-t border-creme/10 font-label text-xs text-creme/25 leading-loose"
       >
         <p>
+          <strong className="text-creme/40">Mentions légales</strong> —{" "}
+          {infos.nom}, entrepreneur individuel · SIRET {infos.siret} ·{" "}
+          {infos.activite} · Hébergeur : Vercel Inc., 440 N Barranca Ave #4133,
+          Covina, CA 91723, États-Unis.
+        </p>
+        <p className="mt-2">
           &copy; {year} {infos.nom}. Tous droits réservés.
         </p>
       </div>
