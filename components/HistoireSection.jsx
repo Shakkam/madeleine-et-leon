@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { histoire } from "@/data/content";
+import { histoire, histoireMadeleine } from "@/data/content";
 import Image from "next/image";
 
 export default function HistoireSection() {
@@ -35,30 +35,41 @@ export default function HistoireSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
           {/* Texte */}
-          <div className="space-y-6 order-2 lg:order-1">
-            {histoire.paragraphes.map((para, i) => (
-              <motion.p
-                key={i}
-                className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med"
-                {...reveal(i * 0.1)}
-              >
-                {para}
-              </motion.p>
+          <div className="space-y-12 order-2 lg:order-1">
+            {histoire.sections.map((section) => (
+              <motion.div key={section.titre} className="space-y-5" {...reveal(0)}>
+                <h2 className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
+                  {section.titre}
+                </h2>
+                {section.paragraphes.map((para, i) => (
+                  <p
+                    key={i}
+                    className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med whitespace-pre-line"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </motion.div>
             ))}
 
-            {/* Citation — blockquote éditoriale */}
-            <motion.blockquote
-              className="mt-8 pl-6 border-l-4 border-beurre"
-              {...reveal(histoire.paragraphes.length * 0.1 + 0.05)}
-            >
+            {/* Conclusion — blockquote éditoriale */}
+            <motion.blockquote className="pl-6 border-l-4 border-beurre space-y-4" {...reveal(0)}>
+              <p className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med">
+                {histoire.conclusion.texte}
+              </p>
               <p className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
-                &#xAB;&nbsp;Beaucoup d&apos;amour dans chaque madeleine.&nbsp;&#xBB;
+                {histoire.conclusion.lignes.map((l) => (
+                  <span key={l} className="block">{l}</span>
+                ))}
+              </p>
+              <p className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med">
+                {histoire.conclusion.fin}
               </p>
             </motion.blockquote>
           </div>
 
           {/* Image stand */}
-          <motion.div className="order-1 lg:order-2" {...reveal(0.1)}>
+          <motion.div className="order-1 lg:order-2 lg:sticky lg:top-24" {...reveal(0.1)}>
             {/* Ruban vichy — nappe du stand */}
             <div
               aria-hidden="true"
@@ -84,6 +95,40 @@ export default function HistoireSection() {
               Stand · Place du Forum, Talence
             </p>
           </motion.div>
+        </div>
+
+        {/* L'histoire de la madeleine */}
+        <div className="mt-20 max-w-3xl space-y-12">
+          <motion.h2
+            className="font-display fraunces-soft italic font-black text-choco leading-none"
+            style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)" }}
+            {...reveal(0)}
+          >
+            {histoireMadeleine.titre}
+          </motion.h2>
+          {histoireMadeleine.sections.map((section, k) => (
+            <motion.div key={k} className="space-y-5" {...reveal(0)}>
+              {section.titre && (
+                <h3 className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
+                  {section.titre}
+                </h3>
+              )}
+              {section.paragraphes.map((para, i) => (
+                <p
+                  key={i}
+                  className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med"
+                >
+                  {para}
+                </p>
+              ))}
+            </motion.div>
+          ))}
+          <motion.p
+            className="pl-6 border-l-4 border-beurre font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight"
+            {...reveal(0)}
+          >
+            {histoireMadeleine.fin}
+          </motion.p>
         </div>
 
         {/* Boîte kraft — vignette secondaire */}

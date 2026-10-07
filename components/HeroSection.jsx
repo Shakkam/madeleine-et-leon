@@ -10,11 +10,11 @@ function Sticker() {
   return (
     <Image
       src="/images/logo.png"
-      alt="Madeleine & Léon — Pâtisserie artisanale, France 2023"
+      alt="Madeleine & Léon — Pâtisserie artisanale, France 2026"
       width={1024}
       height={1024}
       priority
-      className="animate-spin-slow w-28 h-28 sm:w-40 sm:h-40 drop-shadow-xl"
+      className="animate-spin-slow w-24 h-24 sm:w-40 sm:h-40 drop-shadow-xl"
     />
   );
 }
@@ -55,7 +55,7 @@ export default function HeroSection() {
       />
 
       {/* Logo rond rotatif — coin supérieur droit */}
-      <div className="absolute top-6 right-6 sm:top-8 sm:right-10 lg:right-16 z-10">
+      <div className="absolute bottom-24 right-6 sm:bottom-auto sm:top-8 sm:right-10 lg:right-16 z-10">
         <Sticker />
       </div>
 

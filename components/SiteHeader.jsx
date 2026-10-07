@@ -4,7 +4,7 @@
  * SiteHeader
  * Header fixe commun à toutes les pages :
  * bandeau défilant (h-9) + barre d'onglets (h-14) = 5.75rem.
- * Menu burger sous md.
+ * Menu burger sous lg.
  */
 import { useState } from "react";
 import Link from "next/link";
@@ -30,19 +30,19 @@ export default function SiteHeader() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="font-display fraunces-soft italic font-black text-xl text-choco leading-none"
+          className="whitespace-nowrap font-display fraunces-soft italic font-black text-xl text-choco leading-none"
         >
           Madeleine <span className="text-beurre">&amp;</span> Léon
         </Link>
 
         {/* Onglets — desktop */}
-        <ul className="hidden md:flex items-center gap-1 lg:gap-2">
+        <ul className="hidden lg:flex items-center gap-1 lg:gap-2">
           {navigation.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
                 aria-current={isActive(href) ? "page" : undefined}
-                className={`font-label text-[11px] tracking-[0.18em] uppercase px-3 py-2 rounded-full transition-colors duration-200 ${
+                className={`font-label whitespace-nowrap text-[11px] tracking-[0.18em] uppercase px-3 py-2 rounded-full transition-colors duration-200 ${
                   isActive(href)
                     ? "bg-choco text-creme"
                     : "text-choco hover:bg-beurre/25"
@@ -57,7 +57,7 @@ export default function SiteHeader() {
         {/* Burger — mobile */}
         <button
           type="button"
-          className="md:hidden w-10 h-10 -mr-2 flex flex-col items-center justify-center gap-1.5"
+          className="lg:hidden w-10 h-10 -mr-2 flex flex-col items-center justify-center gap-1.5"
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -85,7 +85,7 @@ export default function SiteHeader() {
       {open && (
         <ul
           id="menu-mobile"
-          className="md:hidden bg-creme border-b border-choco/10 px-6 py-4 flex flex-col gap-1 shadow-lg"
+          className="lg:hidden bg-creme border-b border-choco/10 px-6 py-4 flex flex-col gap-1 shadow-lg"
         >
           {navigation.map(({ href, label }) => (
             <li key={href}>

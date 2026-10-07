@@ -2,9 +2,9 @@ import HistoireSection from "@/components/HistoireSection";
 import VichyDivider from "@/components/VichyDivider";
 
 export const metadata = {
-  title: "Histoire",
+  title: "Notre histoire",
   description:
-    "Le savoir-faire Madeleine & Léon : ingrédients choisis avec soin, pâte travaillée à la main et beaucoup d'amour.",
+    "Du graphisme à la cuisine, puis à la pâtisserie : l'histoire de Madeleine & Léon, deux enfants, deux univers, des madeleines sucrées et salées.",
 };
 
 export default function HistoirePage() {
