@@ -52,29 +52,14 @@ export default function Footer() {
                 <span className="font-label text-xs tracking-wider">Instagram</span>
               </a>
             </li>
-            <li>
-              <a
-                href="#mentions-legales"
-                className="font-label text-xs tracking-wider text-creme/30 hover:text-creme/55 transition-colors"
-              >
-                Mentions légales
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
 
-      {/* Mentions légales — placeholder */}
       <div
-        id="mentions-legales"
         className="max-w-5xl mx-auto mt-10 pt-8 border-t border-creme/10 font-label text-xs text-creme/25 leading-loose"
       >
         <p>
-          <strong className="text-creme/40">Mentions légales</strong> —
-          À compléter : nom de l&apos;entreprise, forme juridique, adresse, SIRET,
-          hébergeur, responsable de publication.
-        </p>
-        <p className="mt-2">
           &copy; {year} {infos.nom}. Tous droits réservés.
         </p>
       </div>
