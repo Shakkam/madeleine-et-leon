@@ -2,9 +2,9 @@ import HistoireSection from "@/components/HistoireSection";
 import VichyDivider from "@/components/VichyDivider";
 
 export const metadata = {
-  title: "Notre histoire",
+  title: "Histoire",
   description:
-    "Du graphisme à la cuisine, puis à la pâtisserie : l'histoire de Madeleine & Léon, deux enfants, deux univers, des madeleines sucrées et salées.",
+    "L'histoire de la madeleine : de la cour du roi Stanislas à la madeleine de Proust, une pâtisserie qui fait revenir les souvenirs.",
 };
 
 export default function HistoirePage() {

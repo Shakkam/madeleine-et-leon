@@ -49,59 +49,6 @@ export const gammes = [
 ];
 
 export const histoire = {
-  titre: "Notre histoire",
-  sections: [
-    {
-      titre: "Mon histoire",
-      paragraphes: [
-        "Avant Madeleine & Léon, mon parcours n’était pas tout tracé.",
-        "J’ai commencé par un master en graphisme, puis j’ai travaillé plusieurs années comme chef cuisinier. Deux univers qui, finalement, ne sont pas si éloignés : la créativité, le goût du détail, la recherche de l’équilibre et surtout l’envie de créer quelque chose qui puisse être partagé.",
-        "À 28 ans, j’ai décidé de changer de cap et de me lancer dans un CAP Pâtisserie. Une nouvelle aventure, un nouveau métier.",
-        "Et comme souvent dans la vie, une rencontre peut tout changer. Pour lui faire honneur, j’ai décidé de me consacrer pleinement à un projet autour de cette petite pâtisserie qui porte désormais son prénom.",
-        "Je me suis lancé à fond dans l’aventure des madeleines : chercher les bonnes recettes, travailler les textures, imaginer de nouvelles associations, apprendre encore et encore pour faire d’une madeleine bien plus qu'une simple pâtisserie.",
-        "Puis notre deuxième enfant est arrivé.",
-        "Léon.",
-        "Et l’histoire a pris tout son sens.",
-      ],
-    },
-    {
-      titre: "Madeleine & Léon",
-      paragraphes: [
-        "J’ai choisi de donner à mon projet les prénoms de mes deux enfants.",
-        "Madeleine, pour les madeleines sucrées.\nLéon, pour les madeleines salées.",
-        "Deux prénoms, deux univers, mais une même histoire.",
-        "Les madeleines sucrées portent la douceur, la gourmandise et les souvenirs d’enfance. Les madeleines salées, elles, ouvrent un autre terrain de jeu : l’apéritif, le brunch, les repas, les marchés et les rencontres.",
-        "Derrière chaque recette, il y a une part de moi. Et derrière ce projet, il y a surtout eux.",
-        "Je construis Madeleine & Léon avec cette envie de leur transmettre quelque chose : le goût du travail bien fait, le courage de se lancer, la liberté de créer et surtout l’idée qu’il est possible de construire une vie autour de ce que l’on aime.",
-      ],
-    },
-    {
-      titre: "Un métier fait avec amour",
-      paragraphes: [
-        "Aujourd’hui, je fais ce métier avec amour.",
-        "Chaque madeleine est préparée artisanalement, avec le regard du cuisinier, la précision du pâtissier et la sensibilité du créatif que j’ai toujours été.",
-        "Je cherche la bonne texture, le bon équilibre, la recette qui surprend mais qui donne surtout envie d’en reprendre une.",
-        "Je ne veux pas simplement fabriquer des madeleines. Je veux créer des moments de gourmandise, provoquer un souvenir, une émotion, un sourire autour d’une petite bouchée.",
-        "Et puis il y a les marchés.",
-        "Vous pouvez retrouver Madeleine & Léon sur les marchés talençais et bordelais, au fil des semaines et des saisons. C’est là que l’aventure prend tout son sens : rencontrer les gens, faire goûter mes créations, échanger, écouter les retours et voir une madeleine passer directement de mes mains aux vôtres.",
-        "C’est une façon simple et authentique de faire ce métier.",
-      ],
-    },
-  ],
-  conclusion: {
-    texte: "Madeleine & Léon, c’est une histoire de famille, de gourmandise et de passion.",
-    lignes: ["Deux enfants.", "Deux univers.", "Des madeleines sucrées et salées."],
-    fin: "Et l’envie de continuer à les faire grandir, une madeleine après l’autre.",
-  },
-  imageStand: "/images/stand-marche.jpg",
-  imageStandAlt:
-    "Le stand Madeleine & Léon au marché avec nappe vichy bleu et blanc, paniers en osier et ardoise écrite à la main",
-  imageKraft: "/images/boite-kraft.jpg",
-  imageKraftAlt:
-    "Boîte kraft fermée par un sticker rond monochrome Madeleine & Léon",
-};
-
-export const histoireMadeleine = {
   titre: "L’histoire de la madeleine",
   sections: [
     {
@@ -128,6 +75,12 @@ export const histoireMadeleine = {
     },
   ],
   fin: "C’est parfois le goût d’un moment que l’on n’avait pas envie d’oublier.",
+  imageStand: "/images/gamme-madeleine.jpg",
+  imageStandAlt:
+    "Madeleines dorées à la bosse bien formée, posées sur du papier journal",
+  imageKraft: "/images/boite-kraft.jpg",
+  imageKraftAlt:
+    "Boîte kraft fermée par un sticker rond monochrome Madeleine & Léon",
 };
 
 /**
@@ -176,16 +129,54 @@ export const navigation = [
 export const equipe = {
   intro:
     "Derrière Madeleine & Léon, il y a une passion simple : faire des madeleines comme on les aime, moelleuses et généreuses, et les partager de vive voix sur les marchés bordelais.",
-  membres: [
-    {
-      prenom: "[Prénom à compléter]",
-      role: "Fondation · Pâtisserie · Stand",
-      bio: "[Quelques lignes à compléter : parcours, pourquoi les madeleines, la recette de famille, l'envie de lancer la marque en 2026…]",
-      photo: "/images/stand-marche.jpg",
-      photoPosition: "38% 30%",
-      photoAlt: "Au stand Madeleine & Léon, une boîte kraft tendue à un client",
+  recit: {
+    sections: [
+      {
+        titre: "Mon histoire",
+        paragraphes: [
+          "Avant Madeleine & Léon, mon parcours n’était pas tout tracé.",
+          "J’ai commencé par un master en graphisme, puis j’ai travaillé plusieurs années comme chef cuisinier. Deux univers qui, finalement, ne sont pas si éloignés : la créativité, le goût du détail, la recherche de l’équilibre et surtout l’envie de créer quelque chose qui puisse être partagé.",
+          "À 28 ans, j’ai décidé de changer de cap et de me lancer dans un CAP Pâtisserie. Une nouvelle aventure, un nouveau métier.",
+          "Et comme souvent dans la vie, une rencontre peut tout changer. Pour lui faire honneur, j’ai décidé de me consacrer pleinement à un projet autour de cette petite pâtisserie qui porte désormais son prénom.",
+          "Je me suis lancé à fond dans l’aventure des madeleines : chercher les bonnes recettes, travailler les textures, imaginer de nouvelles associations, apprendre encore et encore pour faire d’une madeleine bien plus qu'une simple pâtisserie.",
+          "Puis notre deuxième enfant est arrivé.",
+          "Léon.",
+          "Et l’histoire a pris tout son sens.",
+        ],
+      },
+      {
+        titre: "Madeleine & Léon",
+        paragraphes: [
+          "J’ai choisi de donner à mon projet les prénoms de mes deux enfants.",
+          "Madeleine, pour les madeleines sucrées.\nLéon, pour les madeleines salées.",
+          "Deux prénoms, deux univers, mais une même histoire.",
+          "Les madeleines sucrées portent la douceur, la gourmandise et les souvenirs d’enfance. Les madeleines salées, elles, ouvrent un autre terrain de jeu : l’apéritif, le brunch, les repas, les marchés et les rencontres.",
+          "Derrière chaque recette, il y a une part de moi. Et derrière ce projet, il y a surtout eux.",
+          "Je construis Madeleine & Léon avec cette envie de leur transmettre quelque chose : le goût du travail bien fait, le courage de se lancer, la liberté de créer et surtout l’idée qu’il est possible de construire une vie autour de ce que l’on aime.",
+        ],
+      },
+      {
+        titre: "Un métier fait avec amour",
+        paragraphes: [
+          "Aujourd’hui, je fais ce métier avec amour.",
+          "Chaque madeleine est préparée artisanalement, avec le regard du cuisinier, la précision du pâtissier et la sensibilité du créatif que j’ai toujours été.",
+          "Je cherche la bonne texture, le bon équilibre, la recette qui surprend mais qui donne surtout envie d’en reprendre une.",
+          "Je ne veux pas simplement fabriquer des madeleines. Je veux créer des moments de gourmandise, provoquer un souvenir, une émotion, un sourire autour d’une petite bouchée.",
+          "Et puis il y a les marchés.",
+          "Vous pouvez retrouver Madeleine & Léon sur les marchés talençais et bordelais, au fil des semaines et des saisons. C’est là que l’aventure prend tout son sens : rencontrer les gens, faire goûter mes créations, échanger, écouter les retours et voir une madeleine passer directement de mes mains aux vôtres.",
+          "C’est une façon simple et authentique de faire ce métier.",
+        ],
+      },
+    ],
+    conclusion: {
+      texte: "Madeleine & Léon, c’est une histoire de famille, de gourmandise et de passion.",
+      lignes: ["Deux enfants.", "Deux univers.", "Des madeleines sucrées et salées."],
+      fin: "Et l’envie de continuer à les faire grandir, une madeleine après l’autre.",
     },
-  ],
+    photo: "/images/stand-marche.jpg",
+    photoPosition: "38% 30%",
+    photoAlt: "Au stand Madeleine & Léon, une boîte kraft tendue à un client",
+  },
   valeurs: [
     { titre: "Fait main", texte: "Chaque fournée est préparée à la main, en petites quantités." },
     { titre: "Ingrédients soignés", texte: "Beurre, œufs, farine : pas de colorants ni de conservateurs." },

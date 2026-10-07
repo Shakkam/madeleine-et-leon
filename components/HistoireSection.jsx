@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { histoire, histoireMadeleine } from "@/data/content";
+import { histoire } from "@/data/content";
 import Image from "next/image";
 
 export default function HistoireSection() {
@@ -21,7 +21,7 @@ export default function HistoireSection() {
         {/* En-tête */}
         <motion.div className="mb-14" {...reveal(0)}>
           <p className="font-label text-xs tracking-[0.3em] uppercase text-choco-cl mb-4">
-            Fait main · Avec amour
+            Une pâtisserie, un souvenir
           </p>
           <h1
             className="font-display fraunces-soft italic font-black text-choco leading-none"
@@ -31,45 +31,10 @@ export default function HistoireSection() {
           </h1>
         </motion.div>
 
-        {/* Corps — deux colonnes sur desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-
-          {/* Texte */}
-          <div className="space-y-12 order-2 lg:order-1">
-            {histoire.sections.map((section) => (
-              <motion.div key={section.titre} className="space-y-5" {...reveal(0)}>
-                <h2 className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
-                  {section.titre}
-                </h2>
-                {section.paragraphes.map((para, i) => (
-                  <p
-                    key={i}
-                    className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med whitespace-pre-line"
-                  >
-                    {para}
-                  </p>
-                ))}
-              </motion.div>
-            ))}
-
-            {/* Conclusion — blockquote éditoriale */}
-            <motion.blockquote className="pl-6 border-l-4 border-beurre space-y-4" {...reveal(0)}>
-              <p className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med">
-                {histoire.conclusion.texte}
-              </p>
-              <p className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
-                {histoire.conclusion.lignes.map((l) => (
-                  <span key={l} className="block">{l}</span>
-                ))}
-              </p>
-              <p className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med">
-                {histoire.conclusion.fin}
-              </p>
-            </motion.blockquote>
-          </div>
-
-          {/* Image stand */}
-          <motion.div className="order-1 lg:order-2 lg:sticky lg:top-24" {...reveal(0.1)}>
+        {/* Corps — photo en tête à droite, le texte l'habille puis reprend toute la largeur */}
+        <div className="flow-root">
+          {/* Image */}
+          <motion.div className="mb-10 lg:float-right lg:w-[46%] lg:ml-14 lg:mb-8" {...reveal(0.1)}>
             {/* Ruban vichy — nappe du stand */}
             <div
               aria-hidden="true"
@@ -84,51 +49,41 @@ export default function HistoireSection() {
             />
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/images/stand-marche.jpg"
+                src={histoire.imageStand}
                 alt={histoire.imageStandAlt}
                 fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[50%_55%]"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-center"
               />
             </div>
-            <p className="font-label text-xs text-choco-cl mt-2 text-right tracking-wide">
-              Stand · Place du Forum, Talence
-            </p>
           </motion.div>
-        </div>
 
-        {/* L'histoire de la madeleine */}
-        <div className="mt-20 max-w-3xl space-y-12">
-          <motion.h2
-            className="font-display fraunces-soft italic font-black text-choco leading-none"
-            style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)" }}
-            {...reveal(0)}
-          >
-            {histoireMadeleine.titre}
-          </motion.h2>
-          {histoireMadeleine.sections.map((section, k) => (
-            <motion.div key={k} className="space-y-5" {...reveal(0)}>
-              {section.titre && (
-                <h3 className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
-                  {section.titre}
-                </h3>
-              )}
-              {section.paragraphes.map((para, i) => (
-                <p
-                  key={i}
-                  className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med"
-                >
-                  {para}
-                </p>
-              ))}
-            </motion.div>
-          ))}
-          <motion.p
-            className="pl-6 border-l-4 border-beurre font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight"
-            {...reveal(0)}
-          >
-            {histoireMadeleine.fin}
-          </motion.p>
+          {/* Texte */}
+          <div className="space-y-12">
+            {histoire.sections.map((section, k) => (
+              <motion.div key={k} className="space-y-5" {...reveal(0)}>
+                {section.titre && (
+                  <h2 className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
+                    {section.titre}
+                  </h2>
+                )}
+                {section.paragraphes.map((para, i) => (
+                  <p
+                    key={i}
+                    className="font-display fraunces-mid text-base sm:text-lg leading-relaxed text-choco-med"
+                  >
+                    {para}
+                  </p>
+                ))}
+              </motion.div>
+            ))}
+
+            <motion.blockquote className="pl-6 border-l-4 border-beurre" {...reveal(0)}>
+              <p className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
+                {histoire.fin}
+              </p>
+            </motion.blockquote>
+          </div>
         </div>
 
         {/* Boîte kraft — vignette secondaire */}

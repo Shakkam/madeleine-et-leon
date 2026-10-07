@@ -1,6 +1,6 @@
 /**
  * QuiSommesNousSection
- * Contenus dans data/content.js → equipe (prénoms et textes à compléter).
+ * Contenus dans data/content.js → equipe .
  */
 import Image from "next/image";
 import { equipe } from "@/data/content";
@@ -23,38 +23,47 @@ export default function QuiSommesNousSection() {
             {equipe.intro}
           </p>
 
-          <div className="mt-16 flex flex-col gap-16">
-            {equipe.membres.map((m) => (
-              <article
-                key={m.prenom}
-                className="grid md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8 md:gap-12 items-center"
-              >
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden md:-rotate-2 shadow-xl">
-                  <Image
-                    src={m.photo}
-                    alt={m.photoAlt}
-                    fill
-                    sizes="(min-width: 768px) 40vw, 100vw"
-                    className="object-cover"
-                    style={{ objectPosition: m.photoPosition }}
-                  />
-                </div>
-                <div>
-                  <p className="font-label text-xs tracking-[0.25em] uppercase text-choco-cl mb-3">
-                    {m.role}
-                  </p>
-                  <h2
-                    className="font-display fraunces-soft italic font-black text-choco leading-none"
-                    style={{ fontSize: "clamp(2.4rem, 5vw, 3.8rem)" }}
-                  >
-                    {m.prenom}
+          <div className="mt-16 flow-root">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl mb-10 md:float-left md:w-[40%] md:mr-12 md:mb-8">
+              <Image
+                src={equipe.recit.photo}
+                alt={equipe.recit.photoAlt}
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+                style={{ objectPosition: equipe.recit.photoPosition }}
+              />
+            </div>
+            <div className="space-y-12">
+              {equipe.recit.sections.map((section) => (
+                <div key={section.titre} className="space-y-5">
+                  <h2 className="font-display fraunces-soft italic font-bold text-3xl sm:text-4xl text-choco leading-tight">
+                    {section.titre}
                   </h2>
-                  <p className="font-display fraunces-mid text-lg text-choco/80 leading-relaxed mt-6">
-                    {m.bio}
-                  </p>
+                  {section.paragraphes.map((para, i) => (
+                    <p
+                      key={i}
+                      className="font-display fraunces-mid text-base sm:text-lg text-choco/80 leading-relaxed whitespace-pre-line"
+                    >
+                      {para}
+                    </p>
+                  ))}
                 </div>
-              </article>
-            ))}
+              ))}
+              <blockquote className="pl-6 border-l-4 border-beurre space-y-4">
+                <p className="font-display fraunces-mid text-base sm:text-lg text-choco/80 leading-relaxed">
+                  {equipe.recit.conclusion.texte}
+                </p>
+                <p className="font-display fraunces-soft italic font-bold text-2xl sm:text-3xl text-choco leading-tight">
+                  {equipe.recit.conclusion.lignes.map((l) => (
+                    <span key={l} className="block">{l}</span>
+                  ))}
+                </p>
+                <p className="font-display fraunces-mid text-base sm:text-lg text-choco/80 leading-relaxed">
+                  {equipe.recit.conclusion.fin}
+                </p>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
