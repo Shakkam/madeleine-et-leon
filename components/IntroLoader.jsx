@@ -10,7 +10,7 @@
  * - reduced-motion : la madeleine ne tourne pas (globals.css).
  */
 import { useEffect, useState } from "react";
-import { MadeleineSvg } from "./ImagePlaceholder";
+import Image from "next/image";
 
 const DUREE = 2000;
 const FONDU = 500;
@@ -43,9 +43,14 @@ export default function IntroLoader() {
       role="status"
       aria-label="Chargement"
     >
-      <div className="w-36 h-28 animate-madeleine">
-        <MadeleineSvg />
-      </div>
+      <Image
+        src="/images/madeleine-loader.png"
+        alt=""
+        width={600}
+        height={674}
+        priority
+        className="w-32 h-auto animate-madeleine"
+      />
       <p className="font-display fraunces-soft italic font-black text-3xl text-choco">
         Madeleine <span className="text-beurre">&amp;</span> Léon
       </p>
