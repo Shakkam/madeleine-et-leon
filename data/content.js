@@ -172,7 +172,7 @@ export const equipe = {
           "Avant Madeleine & Léon, mon parcours n’était pas tout tracé.",
           "J’ai commencé par un master en graphisme, puis j’ai travaillé plusieurs années comme chef cuisinier. Deux univers qui, finalement, ne sont pas si éloignés : la créativité, le goût du détail, la recherche de l’équilibre et surtout l’envie de créer quelque chose qui puisse être partagé.",
           "À 28 ans, j’ai décidé de changer de cap et de me lancer dans un CAP Pâtisserie. Une nouvelle aventure, un nouveau métier.",
-          "Et comme souvent dans la vie, une rencontre peut tout changer. Pour lui faire honneur, j’ai décidé de me consacrer pleinement à un projet autour de cette petite pâtisserie qui porte désormais son prénom.",
+          "Et comme souvent dans la vie, une rencontre peut tout changer. Celle avec ma fille, mon premier enfant, Madeleine. Pour lui faire honneur, j’ai décidé de me consacrer pleinement à un projet autour de cette petite pâtisserie qui porte désormais son prénom.",
           "Je me suis lancé à fond dans l’aventure des madeleines : chercher les bonnes recettes, travailler les textures, imaginer de nouvelles associations, apprendre encore et encore pour faire d’une madeleine bien plus qu'une simple pâtisserie.",
           "Puis notre deuxième enfant est arrivé.",
           "Léon.",
